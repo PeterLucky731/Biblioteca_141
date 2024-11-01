@@ -37,5 +37,5 @@ create table devolucao(
     foreign key (id_emprestimo) references emprestimo(id)
 );
 
-insert into livro(titulo, autor, genero, descicao) values ("","","","");
+-- insert into livro(titulo, autor, genero, descicao) values ("","","","");
 

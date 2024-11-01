@@ -1,7 +1,7 @@
 <?php
 
-require "./config/database.php";
-require "./models/Livro.php";
+require_once './config/database.php';
+require_once './models/Livro.php';
 
 class livroController{
     public function cadastrarLivro($titulo, $autor, $genero){
@@ -13,10 +13,12 @@ class livroController{
         $livro->autor = $autor;
         $livro->genero = $genero;
 
-        if($livro->cadastrarLivro()){
+        if($livro->cadastrarLivro($titulo, $autor, $genero)){
+            $bd->close();
             header('Location: index.php');
         }else{
             echo "Erro ao cadastrar livro";
         }
     }
 }
+
