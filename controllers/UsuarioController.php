@@ -20,5 +20,6 @@ class usuarioController{
         }else{
             echo "Erro ao cadastrar usuario";
         }
-    }
+        
+
 }
