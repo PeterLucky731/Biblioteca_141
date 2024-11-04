@@ -30,4 +30,21 @@ class Livro implements Crud
         $query = "INSERT INTO {$this->table} (titulo, autor, genero) values ('{$this->titulo}','{$this->autor}','{$this->genero}');";
         return $this->conexao->query($query);
     }
+
+    public function ler()
+    {
+
+    }
+
+    public function atualizar()
+    {
+
+    }
+
+    public function deletar()
+    {
+        
+    }
+
+
 }
