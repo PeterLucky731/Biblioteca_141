@@ -43,7 +43,7 @@ class Livro implements Crud
 
     public function deletar()
     {
-        
+    
     }
 
 
