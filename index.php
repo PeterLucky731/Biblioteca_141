@@ -9,7 +9,6 @@ switch($acao){
         $livroController = new LivroController();
         $livroController->cadastrarLivro($_POST['titulo'], $_POST['autor'], $_POST['genero']);
         break;
-    
     default:
         include 'views/formCadastrarLivro.php';
 }
