@@ -7,7 +7,7 @@
 body{
     display: flex;
     justify-content: center;
-    background-image: url('http://localhost/Biblioteca_141/views/img/image.png');
+    background-image: url('../img/image.png');
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
