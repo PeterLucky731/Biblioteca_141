@@ -30,5 +30,8 @@ class Usuario implements Crud
         $query = "INSERT INTO {$this->table} (nome, email, senha, data_nasc) values ('{$this->nome}','{$this->email}','{$this->senha}','{$this->data_nasc}');";
         return $this->conexao->query($query);
     }
-    
+    public function loginUsuario()
+    {
+        
+    }
 }
