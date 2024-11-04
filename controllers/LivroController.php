@@ -4,7 +4,8 @@ require_once './config/database.php';
 require_once './models/Livro.php';
 
 class livroController{
-    public function cadastrarLivro($titulo, $autor, $genero){
+    public function cadastrar($titulo, $autor, $genero)
+    {
         $database = new Banco();
         $bd = $database->conectar();
 
@@ -13,10 +14,12 @@ class livroController{
         $livro->autor = $autor;
         $livro->genero = $genero;
 
-        if($livro->cadastrarLivro($titulo, $autor, $genero)){
+        if($livro->cadastrar())
+        {
             $bd->close();
             header('Location: index.php');
-        }else{
+        }else
+        {
             echo "Erro ao cadastrar livro";
         }
     }
