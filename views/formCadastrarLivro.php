@@ -18,6 +18,9 @@
     
         <label for="genero">Genero do Livro</label>
         <input type="text" name="genero" id="genero">
+
+        <label for="isbn">Isbn do Livro</label>
+        <input type="text" name="isbn" id="isbn">
     
         <input type="submit" value="Cadastrar Livro">
     </form>

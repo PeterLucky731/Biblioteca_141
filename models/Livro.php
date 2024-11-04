@@ -12,6 +12,7 @@ class Livro implements Crud
     public $autor;
     public $descricao;
     public $genero;
+    public $isbn;
 
     public function __construct($bd)
     {
@@ -27,7 +28,7 @@ class Livro implements Crud
 
     public function cadastrar()
     {
-        $query = "INSERT INTO {$this->table} (titulo, autor, genero) values ('{$this->titulo}','{$this->autor}','{$this->genero}');";
+        $query = "INSERT INTO {$this->table} (titulo, autor, genero) values ('{$this->titulo}','{$this->autor}','{$this->genero}','{$this->isbn}');";
         return $this->conexao->query($query);
     }
 

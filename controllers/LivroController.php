@@ -4,7 +4,7 @@ require_once './config/database.php';
 require_once './models/Livro.php';
 
 class livroController{
-    public function cadastrar($titulo, $autor, $genero)
+    public function cadastrar($titulo, $autor, $genero, $isbn)
     {
         $database = new Banco();
         $bd = $database->conectar();
@@ -13,6 +13,7 @@ class livroController{
         $livro->titulo = $titulo;
         $livro->autor = $autor;
         $livro->genero = $genero;
+        $isbn->isbn = isbn;
 
         if($livro->cadastrar())
         {
