@@ -39,4 +39,3 @@ create table devolucao(
 );
 
 -- insert into livro(titulo, autor, genero, descicao) values ("","","","");
-
