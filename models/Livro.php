@@ -1,8 +1,8 @@
 <?php
 
-require "./models/Crud.php";
 
-class Livro implements Crud
+
+class Livro 
 {
     private $conexao;
     private $table = 'livro';

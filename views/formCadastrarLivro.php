@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./views/css/style.css">
+    <link rel="stylesheet" href="../views/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <section id="sec-form">
-    <form id="box-form" action="index.php?acao=cadastrar" method="post">
+    <form id="box-form" action="../pages/Cadastro_Livro.php?acao=cadastrar" method="post">
         <label for="titulo">Titulo do Livro</label>
         <input type="text" name="titulo" id="titulo">
     
