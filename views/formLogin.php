@@ -6,7 +6,12 @@
 </head>
 <body>
     <form action="Login.php?acao=login" method="post">
-        <label>
-        <input>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+
+        <label for="senha">senha</label>
+        <input type="text" name="senha" id="senha">
+
+        <input type="submit" value="Fazer login">
     </form>
 </body>
