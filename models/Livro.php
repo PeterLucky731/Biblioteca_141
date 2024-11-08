@@ -12,7 +12,8 @@ class Livro {
     public $descricao;
     public $isbn;
     public $genero;
-    public $isbn;
+    public $statusLivro;
+    
 
     public function __construct($bd){
         $this->conexao = $bd;
@@ -25,16 +26,9 @@ class Livro {
     }
   
     public function cadastrar(){
-        $query = "SELECT COUNT(*) FROM {$this->table} WHERE isbn = '{$this->isbn}'";
-        $resultado = $this->conexao->query($query);
-        $row = $resultado->fetch_row();
-
-        if ($row[0] > 0) {
-            return false;  
-        }
-
-        $query = "INSERT INTO {$this->table} (titulo, autor, descricao, isbn, genero, status) 
-        VALUES ('{$this->titulo}', '{$this->autor}', '{$this->descricao}', '{$this->isbn}', '{$this->genero}', 'disponivel')";
+        
+        $query = "INSERT INTO {$this->table} (titulo, autor, genero, isbn, descricao,statusLivro) 
+        VALUES ('{$this->titulo}', '{$this->autor}', '{$this->genero}', '{$this->isbn}', '{$this->descricao}', '{$statusLivro}')";
         return $this->conexao->query($query);  
     }
 

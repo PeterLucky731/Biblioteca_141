@@ -19,6 +19,7 @@ class usuarioController{
             header('Location: ../pages/Cadastro_usuario.php');
         }else{
             echo "Erro ao cadastrar usuario";
-        }
+        } 
     }
 }
+
