@@ -22,6 +22,9 @@
         <label for="isbn">Isbn do Livro</label>
         <input type="text" name="isbn" id="isbn">
     
+        <label for="descricao">Descricao:</label>
+        <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea>
+    
         <input type="submit" value="Cadastrar Livro">
     </form>
     </section>
