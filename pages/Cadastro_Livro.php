@@ -8,7 +8,7 @@ switch($acao)
 {
     case 'cadastrar':
         $livroController = new LivroController();
-        $livroController->cadastrarLivro($_POST['titulo'], $_POST['autor'], $_POST['genero']);
+        $livroController->cadastrarLivro($_POST['titulo'], $_POST['autor'], $_POST['genero'], $_POST['isbn']);
         break;
     default:
         include 'views/formCadastrarLivro.php';
