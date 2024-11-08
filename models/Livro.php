@@ -12,6 +12,7 @@ class Livro {
     public $descricao;
     public $isbn;
     public $genero;
+    public $isbn;
 
     public function __construct($bd){
         $this->conexao = $bd;
@@ -22,8 +23,7 @@ class Livro {
         $resultado = $this->conexao->query($query);
         return $resultado->fetch_all(MSQLI_ASSOC);
     }
-
-    
+  
     public function cadastrar(){
         $query = "SELECT COUNT(*) FROM {$this->table} WHERE isbn = '{$this->isbn}'";
         $resultado = $this->conexao->query($query);

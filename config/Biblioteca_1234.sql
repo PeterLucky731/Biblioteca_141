@@ -5,7 +5,7 @@ create table usuario(
 	id int primary key auto_increment,
 	nome varchar(80) not null,
     email varchar(80) not null,
-    senha varchar(16),
+    senha varchar(20),
     data_nasc date
 );
 
@@ -14,6 +14,7 @@ create table livro(
 	titulo varchar(50) not null,
     autor varchar(80) not null,
     genero varchar(30),
+    isbn varchar(14),
     descricao text(200)
 );
 
@@ -38,4 +39,3 @@ create table devolucao(
 );
 
 -- insert into livro(titulo, autor, genero, descicao) values ("","","","");
-

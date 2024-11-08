@@ -14,6 +14,7 @@ class livroController{
         $livro->autor = $autor;
         $livro->isbn = $isbn;
         $livro->genero = $genero;
+        $isbn->isbn = isbn;
 
         if($livro->cadastrar())
         {
