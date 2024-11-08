@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controllers/UsuarioController.php';
+require_once '../controllers/UsuarioController.php';
 
 $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
 
@@ -12,6 +12,6 @@ switch($acao)
         break;
     
     default:
+
         include 'views/formCadastrarUsuario.php';
 }
-
