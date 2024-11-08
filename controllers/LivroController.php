@@ -19,9 +19,10 @@ class livroController{
         if($livro->cadastrar())
         {
             $bd->close();
-            header('Location: ../pages/Cadastro_Livro.php');
-        }
-        else {
+
+            header('Location: Cadastro_Livro.php');
+        }else
+        {
             echo "Erro ao cadastrar livro";
         }
     }
