@@ -4,7 +4,8 @@ require_once '../config/database.php';
 require_once '../models/Livro.php';
 
 class livroController{
-    public function cadastrar($titulo, $autor, $genero,$isbn,$descricao)
+  
+    public function cadastrar($titulo, $autor, $genero, $isbn, $descricao)
     {
         $database = new Banco();
         $bd = $database->conectar();
@@ -26,8 +27,7 @@ class livroController{
             echo "Erro ao cadastrar livro";
         }
     }
-
-
+  
     public function consultar($campo, $valor) {
 
         $database = new Banco();
@@ -97,7 +97,6 @@ class livroController{
     
             $bd->close();
         }
+
 }
-
-
 
