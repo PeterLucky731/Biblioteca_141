@@ -9,10 +9,10 @@
 
 <body>
     <section id="sec-form">
-    <form id="box-form" action="index.php?acao=cadastrar" method="post">
+    <form id="box-form" action="formCadastrarLivro.php?acao=cadastrar" method="post">
         <label for="titulo">Titulo do Livro</label>
         <input type="text" name="titulo" id="titulo">
-    
+
         <label for="autor">Autor do Livro</label>
         <input type="text" name="autor" id="autor">
     

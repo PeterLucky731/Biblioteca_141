@@ -6,7 +6,6 @@ class Livro implements Crud
 {
     private $conexao;
     private $table = 'livro';
-
     public $id;
     public $titulo;
     public $autor;
