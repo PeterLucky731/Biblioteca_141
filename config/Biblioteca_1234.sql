@@ -15,7 +15,8 @@ create table livro(
     autor varchar(80) not null,
     genero varchar(30),
     isbn varchar(14),
-    descricao text(200)
+    descricao text(200),
+    statusLivro bool
 );
 
 create table emprestimo(
