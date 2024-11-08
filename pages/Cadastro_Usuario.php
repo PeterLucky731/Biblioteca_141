@@ -14,3 +14,4 @@ switch($acao)
     default:
         include 'views/formCadastrarUsuario.php';
 }
+

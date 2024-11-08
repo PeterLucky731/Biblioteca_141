@@ -4,7 +4,7 @@ require_once '../config/database.php';
 require_once '../models/Livro.php';
 
 class livroController{
-    public function cadastrar($titulo, $autor,$isbn, $genero)
+    public function cadastrar($titulo, $autor, $genero,$isbn,$descricao)
     {
         $database = new Banco();
         $bd = $database->conectar();
@@ -12,20 +12,21 @@ class livroController{
         $livro = new Livro($bd);
         $livro->titulo = $titulo;
         $livro->autor = $autor;
-        $livro->isbn = $isbn;
-        $livro->genero = $genero;
-        $isbn->isbn = isbn;
+        $livro->genero = $genero; 
+        $livro->isbn = $isbn; 
+        $livro->descricao = $descricao; 
+        $livro->status = $status; 
 
         if($livro->cadastrar())
         {
             $bd->close();
-
-            header('Location: Cadastro_Livro.php');
+            header('Location: ../pages/Cadastro_Livro.php');
         }else
         {
             echo "Erro ao cadastrar livro";
         }
     }
+
 
     public function consultar($campo, $valor) {
 
@@ -85,11 +86,8 @@ class livroController{
             $bd = $database->conectar();
     
             $livro = new Livro($bd);
-    
-            if ($livro->isEmprestado($id)) {
-                echo "Erro: Não é possível excluir um livro emprestado.";
-                return;
-            }
+
+      
 
             if ($livro->deletar($id)) {
                 echo "Livro excluído com sucesso!";
