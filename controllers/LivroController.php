@@ -28,26 +28,26 @@ class livroController{
         }
     }
   
-    // public function consultar($campo, $valor) {
+    public function consultar($criterio, $valor) {
+        
+        $database = new Banco();
+        $bd = $database->conectar();
+        $livro = new Livro($bd);
+        
+        $resultados = $livro->consultar($criterio, $valor);
+        
+        // Verificar se há livros encontrados
+        if (count($resultados) > 0) {
+            foreach ($resultados as $livro) {
+                echo "ID: " . $livro['id'] . " | Título: " . $livro['titulo'] . " | Autor: " . $livro['autor'] . " | ISBN: " . $livro['isbn'] . " | Gênero: " . $livro['genero'] . "<br>";
+            }
+        } else {
+            echo "Nenhum livro encontrado com o critério: '$criterio' = '$valor'.<br>";
+        }
 
-    //     $database = new Banco();
-    //     $bd = $database->conectar();
-
-    //     $livro = new Livro($bd);
-
-    //     $resultados = $livro->consultar($campo, "%$valor%");
-
-    //     if ($resultados->num_rows > 0) {
-    //         while ($livro = $resultados->fetch_assoc()) {
-    //             echo "ID: " . $livro['id'] . " | Título: " . $livro['titulo'] . " | Autor: " . $livro['autor'] . " | ISBN: " . $livro['isbn'] . "<br>";
-    //         }
-    //     } else {
-    //         echo "Nenhum livro encontrado.";
-    //     }
-
-    //     $bd->close();
-    // }
-
+        // Fechar a conexão com o banco
+        $bd->close();
+    }
 
      public function atualizar($id, $titulo, $autor, $isbn, $genero) {
 
