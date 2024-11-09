@@ -9,13 +9,14 @@ create table usuario(
     data_nasc date
 );
 
-CREATE TABLE livros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
-    autor VARCHAR(255) NOT NULL,    
-    isbn VARCHAR(13) UNIQUE NOT NULL,
-    genero VARCHAR(100) NOT NULL,
-    status ENUM('disponivel', 'emprestado') DEFAULT 'disponivel' NOT NULL
+create table livro(
+	id int primary key auto_increment,
+	titulo varchar(100),
+    autor varchar(100),
+    descricao varchar(300),
+    isbn varchar(13),
+    genero varchar(100),
+    statusLivro enum('disponivel', 'emprestado') default 'disponivel' not null
 );
 
 create table emprestimo(
@@ -38,4 +39,4 @@ create table devolucao(
     foreign key (id_emprestimo) references emprestimo(id)
 );
 
--- insert into livro(titulo, autor, genero, descicao) values ("","","","");
+
