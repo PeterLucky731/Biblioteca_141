@@ -16,7 +16,7 @@ class livroController{
         $livro->genero = $genero; 
         $livro->isbn = $isbn; 
         $livro->descricao = $descricao; 
-        $livro->status = $status; 
+        $livro->statusLivro = $statusLivro; 
 
         if($livro->cadastrar())
         {
@@ -28,25 +28,25 @@ class livroController{
         }
     }
   
-    public function consultar($campo, $valor) {
+    // public function consultar($campo, $valor) {
 
-        $database = new Banco();
-        $bd = $database->conectar();
+    //     $database = new Banco();
+    //     $bd = $database->conectar();
 
-        $livro = new Livro($bd);
+    //     $livro = new Livro($bd);
 
-        $resultados = $livro->consultar($campo, "%$valor%");
+    //     $resultados = $livro->consultar($campo, "%$valor%");
 
-        if ($resultados->num_rows > 0) {
-            while ($livro = $resultados->fetch_assoc()) {
-                echo "ID: " . $livro['id'] . " | Título: " . $livro['titulo'] . " | Autor: " . $livro['autor'] . " | ISBN: " . $livro['isbn'] . "<br>";
-            }
-        } else {
-            echo "Nenhum livro encontrado.";
-        }
+    //     if ($resultados->num_rows > 0) {
+    //         while ($livro = $resultados->fetch_assoc()) {
+    //             echo "ID: " . $livro['id'] . " | Título: " . $livro['titulo'] . " | Autor: " . $livro['autor'] . " | ISBN: " . $livro['isbn'] . "<br>";
+    //         }
+    //     } else {
+    //         echo "Nenhum livro encontrado.";
+    //     }
 
-        $bd->close();
-    }
+    //     $bd->close();
+    // }
 
 
      public function atualizar($id, $titulo, $autor, $isbn, $genero) {
@@ -86,13 +86,13 @@ class livroController{
             $bd = $database->conectar();
     
             $livro = new Livro($bd);
-
+            $livro->id = $id;
       
 
-            if ($livro->deletar($id)) {
-                echo "Livro excluído com sucesso!";
+            if (!$livro->deletar()) {
+                echo "Erro: Não é possível excluir este livro, ele está emprestado.!";
             } else {
-                echo "Erro ao excluir o livro.";
+                echo "livro excluído";
             }
     
             $bd->close();

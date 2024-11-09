@@ -9,14 +9,13 @@ create table usuario(
     data_nasc date
 );
 
-create table livro(
-	id int primary key auto_increment,
-	titulo varchar(50) not null,
-    autor varchar(80) not null,
-    genero varchar(30),
-    isbn varchar(14),
-    descricao text(200),
-    statusLivro bool
+CREATE TABLE livros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,    
+    isbn VARCHAR(13) UNIQUE NOT NULL,
+    genero VARCHAR(100) NOT NULL,
+    status ENUM('disponivel', 'emprestado') DEFAULT 'disponivel' NOT NULL
 );
 
 create table emprestimo(
