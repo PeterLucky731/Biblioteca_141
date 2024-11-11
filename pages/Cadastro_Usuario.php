@@ -7,11 +7,14 @@ $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
 switch($acao)
 {
     case 'cadastrar':
-        $usuarioController = new usuarioController();
-        $usuarioController->cadastrar($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['data_nasc']);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $usuarioController = new usuarioController();
+            $usuarioController->cadastrar($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['data_nasc']);
+        } else {
+            echo "Método de requisição inválido.";
+        }
         break;
     
     default:
-
-        include 'views/formCadastrarUsuario.php';
+        include '../views/formCadastrarUsuario.php';
 }

@@ -39,11 +39,10 @@ class Livro {
     }
 
 
-    public function consultar(){
-    
+    public function consultar($criterio, $valor){
         $query = "SELECT * FROM {$this->table} WHERE {$criterio} LIKE '%{$valor}%'";
         $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MYSQLI_ASSOC);  
+        return $resultado->fetch_all(MYSQLI_ASSOC);
     }
 
 
