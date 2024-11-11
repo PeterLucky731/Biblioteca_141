@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
     <title>Index</title>
 </head>
 <body>
+    <?php require_once "./views/cabeça.php"; ?>
     <!-- tem que mudar isso daqui depois -->
-    <h1>Menu de Bosta</h1>
-    <ul>
-        <li><a href="/Biblioteca_141/pages/Login.php">Fazer Login</a></li>
-        <li><a href="/Biblioteca_141/pages/Cadastro_Livro.php">Cadastrar Livro</a></li>
-        <li><a href="/Biblioteca_141/pages/Cadastro_Usuario.php">Cadastrar Usuário</a></li>
-        <li><a href="/Biblioteca_141/pages/Emprestimo_Livro.php">Registrar Empréstimo</a></li>
-        <li><a href="/Biblioteca_141/pages/Consultar_LIvro.php">Consultar Livro</a></li>
-    </ul>
+    <section id="sec-pai">
+        <section id="sec-menu">
+            <ul id="ul-menu">
+                <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Login.php">Fazer Login</a></li>
+                <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Cadastro_Livro.php">Cadastrar Livro</a></li>
+                <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Cadastro_Usuario.php">Cadastrar Usuário</a></li>
+                <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Emprestimo_Livro.php">Registrar Empréstimo</a></li>
+                <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Consultar_LIvro.php">Consultar Livro</a></li>
+            </ul>
+        </section>
+    </section>
+    <section id="box-img"><img src="./views/img/leo-removebg-preview.png" alt=""></section>
 
-        <!-- isso daqui é balela minha -->
-    <h1 style="font-size: 100px;">BEM-VINDO A BIBLIOTECA DO SHADOW (work in progress)</h1>
-
-    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="wip" style="width: 300px; height: auto;">
-    
+    <!-- isso daqui é balela minha -->
+    <section id="second-sec">
+        <h1 style="font-size: 50px;">BEM-VINDO A BIBLIOTECA DO SHADOW (work in progress)</h1>
+    </section>
 </body>
 </html>
