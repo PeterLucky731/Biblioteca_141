@@ -2,13 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Document</title>
+    <title>Formulário de Empréstimo</title>
 </head>
 <body>
-    <section id="sec-form">
-    <form id="box-form" action="../pages/Emprestimo.php.php?acao=login" method="post">
-        <label for="titulo">Emprestimo</label>
-        <input type="text" name="titulo" id="titulo">
+    <section>
+        <h2>Registrar Empréstimo</h2>
+        <form action="../pages/Emprestimo_Livro.php?acao=registrar" method="post">
+            
+            <label for="livro_id">ID do Livro:</label>
+            <input type="number" id="livro_id" name="id_livro" required>
+            <br><br>
+
+            <label for="usuario_id">ID do Usuário:</label>
+            <input type="number" id="usuario_id" name="id_usuario" required>
+            <br><br>
+
+            <label for="data_emprestimo">Data de Empréstimo:</label>
+            <input type="date" id="data_emprestimo" name="data_emprestimo" required>
+            <br><br>
+
+            <input type="submit" value="Registrar Emprestimo">
+        </form>
+    </section>
 </body>
+</html>
