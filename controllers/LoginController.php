@@ -1,7 +1,7 @@
 <?php
 
-require_once '../config/database.php';
-require_once '../models/Usuario.php';
+require_once './config/database.php';
+require_once './models/Usuario.php';
 
 class LoginController
 {
@@ -27,6 +27,7 @@ class LoginController
             // Comparando a senha diretamente
             if ($senha === $senhaArmazenada) {
                 echo "Login bem-sucedido!";
+                include 'index.php';
             } else {
                 echo "Senha incorreta.";
             }
