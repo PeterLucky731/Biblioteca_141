@@ -5,7 +5,7 @@ require_once '../models/Devolucao.php';
 
 class DevolucaoController {
     
-    public function registrarDevolucao($id_emprestimo, $id_usuario, $id_livro) {
+    public function devolverLivro($id_usuario, $id_livro) {
         $database = new Banco();
         $bd = $database->conectar();
 
@@ -15,7 +15,7 @@ class DevolucaoController {
         $devolucao->id_livro = $id_livro;
         $devolucao->data_devolucao = date('Y-m-d');
 
-        if ($devolucao->registrar()) {
+        if ($devolucao->devolver()) {
             echo "Devolução registrada com sucesso!(MAI BAH É US CODA E DORME CARAIO)";
         } else {
             echo "Erro ao registrar devolução (F PROCE AMIGÃO)";
