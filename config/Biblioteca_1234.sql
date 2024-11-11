@@ -11,12 +11,12 @@ create table usuario(
 
 create table livro(
 	id int primary key auto_increment,
-	titulo varchar(50) not null,
-    autor varchar(80) not null,
-    genero varchar(30),
-    isbn varchar(14),
-    descricao text(200),
-    statusLivro bool
+	titulo varchar(100),
+    autor varchar(100),
+    descricao varchar(300),
+    isbn varchar(13),
+    genero varchar(100),
+    statusLivro enum('disponivel', 'emprestado') default 'disponivel' not null
 );
 
 create table emprestimo(
@@ -39,4 +39,4 @@ create table devolucao(
     foreign key (id_emprestimo) references emprestimo(id)
 );
 
--- insert into livro(titulo, autor, genero, descicao) values ("","","","");
+
