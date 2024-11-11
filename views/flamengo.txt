@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(253, 194, 0);
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    height: 150px;
+    background-image: url(../img/flor.jpg);
+    display: flex;
+    flex-direction: column;
+}
+#sec-header{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+#div-logo{
+    width: 90px;
+    height: auto;
+}
+#div-logo img{
+    width: 100%;
+    height: auto;
+}
+#ul-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.li-header a{
+    color: rgb(0, 119, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+.div-a {
+    background-image: url(../img/nuvem.png);
+    padding: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Header</title>
+</head>
+<body>
+<header>
+    <section id="sec-header">
+        <div id="div-logo">
+            <a href="!">
+                <img src="./img/shadowJack.png" alt="a">
+            </a>
+    </div>
+    <ul id="ul-header">
+        <li class="li-header">
+            <div class="div-a" >    
+                <a href="#" class="anton-regular">
+                    Livros
+                </a>
+            </li>
+        </div>
+        <div class="div-a">    
+            <li class="li-header">
+                <a href="#" class="anton-regular">
+                    Cadastrar Livro
+                </a>
+                </li>
+            </div>
+            <div class="div-a">    
+                <li class="li-header">
+                    <a href="#" class="anton-regular">
+                        Cadastrar Usuario
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <div id="div-logo">
+            <a href="!">
+                <img src="./img/shadowESPELHO.png" alt="a">
+            </a>
+        </div>
+    </section>
+</header>
+</body>
+</html>
