@@ -9,6 +9,7 @@ class Usuario
 
     public $id;
     public $nome;
+    public $cpf;
     public $email;
     public $senha;
     public $data_nasc;
@@ -27,7 +28,7 @@ class Usuario
 
     public function cadastrar()
     {
-        $query = "INSERT INTO {$this->table} (nome, email, senha, data_nasc) values ('{$this->nome}','{$this->email}','{$this->senha}','{$this->data_nasc}');";
+        $query = "INSERT INTO {$this->table} (nome, cpf, email, senha, data_nasc) values ('{$this->nome}', '{$this->cpf}','{$this->email}','{$this->senha}','{$this->data_nasc}');";
         return $this->conexao->query($query);
     }
 

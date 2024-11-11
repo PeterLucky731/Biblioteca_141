@@ -35,7 +35,7 @@ class Livro {
 
         $query = "INSERT INTO {$this->table} (titulo, autor, genero, isbn, descricao,statusLivro) 
         VALUES ('{$this->titulo}', '{$this->autor}', '{$this->genero}', '{$this->isbn}', '{$this->descricao}', '{$statusLivro}')";
-        return $this->conexao->query($query);  
+        return $this->conexao->query($query);
     }
 
 

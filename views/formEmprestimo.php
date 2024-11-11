@@ -9,12 +9,12 @@
         <h2>Registrar Empréstimo</h2>
         <form action="../pages/Emprestimo_Livro.php?acao=registrar" method="post">
             
-            <label for="livro_id">ID do Livro:</label>
-            <input type="number" id="livro_id" name="id_livro" required>
+            <label for="titulo">Titulo do livro:</label>
+            <input type="text" id="titulo" name="titulo" required>
             <br><br>
 
-            <label for="usuario_id">ID do Usuário:</label>
-            <input type="number" id="usuario_id" name="id_usuario" required>
+            <label for="email">Email do usuário:</label>
+            <input type="email" id="email" name="email" required>
             <br><br>
 
             <label for="data_emprestimo">Data de Empréstimo:</label>
