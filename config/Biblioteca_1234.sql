@@ -4,17 +4,20 @@ use biblioteca_1234;
 create table usuario(
 	id int primary key auto_increment,
 	nome varchar(80) not null,
+    cpf varchar(12) not null,
     email varchar(80) not null,
-    senha varchar(16),
+    senha varchar(20),
     data_nasc date
 );
 
 create table livro(
 	id int primary key auto_increment,
-	titulo varchar(50) not null,
-    autor varchar(80) not null,
-    genero varchar(30),
-    descricao text(200)
+	titulo varchar(100),
+    autor varchar(100),
+    descricao varchar(300),
+    isbn varchar(13),
+    genero varchar(100),
+    statusLivro enum('disponivel', 'emprestado') default 'disponivel' not null
 );
 
 create table emprestimo(
@@ -37,5 +40,4 @@ create table devolucao(
     foreign key (id_emprestimo) references emprestimo(id)
 );
 
--- insert into livro(titulo, autor, genero, descicao) values ("","","","");
 
