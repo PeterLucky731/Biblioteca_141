@@ -11,7 +11,7 @@
     <?php require_once "./views/cabeça.php"; ?>
     <!-- tem que mudar isso daqui depois -->
     <section id="sec-pai">
-<<<<<<< HEAD
+
     <section id="sec-menu">
     <ul id="ul-menu">
         <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Login.php">Fazer Login</a></li>
@@ -31,7 +31,7 @@
     
     </section>
     
-=======
+
         <section id="sec-menu">
             <ul id="ul-menu">
                 <li class="li-menu"><a class="a-menu" href="/Biblioteca_141/pages/Login.php">Fazer Login</a></li>

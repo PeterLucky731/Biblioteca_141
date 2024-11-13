@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+body{
+    background-image: url("../../views/img/flor.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#sec-primeira{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec-form{
+    background: rgba( 255, 255, 255, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 600px;
+    aspect-ratio: 1/1;
+    /* padding: 30px; */
+    margin-top: 250px;
+}
+
+#form-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.input-cl{
+    width: 300px;
+    height: 20px;
+    border: 2px solid rgb(38, 129, 2);
+    border-radius: 10px;
+}
+
+#reg-input{
+    padding: 10px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: rgb(5, 99, 28);
+    color: rgb(255, 255, 255);
+}
+
+#main-input{
+    padding: 10px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: rgb(5, 99, 28);
+    color: rgb(255, 255, 255);
+}
+#div-diff{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(5, 99, 28);
+    color: rgb(65, 216, 27);
+    font-size: 40px;
+}
+.label-cl{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(3, 85, 23);
+    color: rgb(29, 126, 4);
+}
